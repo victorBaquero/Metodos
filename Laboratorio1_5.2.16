@@ -1,0 +1,10 @@
+#Funcion Analitica Paracaidas
+## En Esta funcion se Calcula la Velocidad del paracaidista En un Determinado Tiempo t
+g, m, c, e = 9.8, 68.1, 12.5, 2.71
+t = 0
+print ("t\t|\tv(t)")
+print ("-------------------------")
+while t<=180:
+    v=(g*m/c)*(1-e**(-(c/m)*t))
+    print ("%d\t|\t%f" % (t,v))
+    t=t+1
