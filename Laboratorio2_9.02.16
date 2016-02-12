@@ -19,16 +19,19 @@ while cont<=102:
         print ("%d\t|\t%f\t|\t%f" % (ta,va,vmn))
         vmn=vmn+(g-(c/m*vmn))*(tmn-(tmn-2))
         x.append(ta)
-        y.append(vmn)
+        y.append(vmn)        
     else :
-        print ("%d\t|\t%f\t|\t--.---" % (ta,va)) 
+        print ("%d\t|\t%f\t|\t--.---" % (ta,va))     
     tmn+=2
     ta+=1
     cont+=1
     x1.append(cont)
-plt.plot(x,y,'k',label = 'Vmn')
-plt.plot(x1,y1,'r--',label = 'Va')
+plt.xlim(0,102)
+plt.ylim(0,70)
+plt.plot(x,y,'k',label = 'Velocidad por Metodos Numericos')
+plt.plot(x1,y1,'r--',label = 'Velocidad Analitica')
 plt.legend(loc = 2)
 plt.xlabel(r"$tiempo$", fontsize = 24, color = (1,0,0))
 plt.ylabel(r"$velocidad$", fontsize = 24, color = 'blue')
+plt.text(x = 0, y = 70, s = u'Funcion Analitica y Metodos Numericos Paracaidas', fontsize = 18)
 plt.show()
